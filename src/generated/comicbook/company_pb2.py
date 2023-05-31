@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63omicbook/company.proto\x12\ncommicbook\"+\n\x0f\x43ompanyResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x07\n\x05\x45mpty2G\n\x07\x43ompany\x12<\n\x06GetAll\x12\x11.commicbook.Empty\x1a\x1b.commicbook.CompanyResponse\"\x00\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63omicbook/company.proto\x12\ncommicbook\"+\n\x0f\x43ompanyResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x07\n\x05\x45mpty2G\n\x07\x43ompany\x12<\n\x06GetAll\x12\x11.commicbook.Empty\x1a\x1b.commicbook.CompanyResponse\"\x00\x30\x01\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comicbook.company_pb2', globals())
