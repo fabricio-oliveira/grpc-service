@@ -2,15 +2,13 @@ syntax = "proto3";
 
 package commicbook;
 
+import "google/protobuf/empty.proto";
+
 service Company {
-  rpc GetAll (Empty) returns (stream CompanyResponse) {}
+  rpc GetAll (google.protobuf.Empty) returns (stream CompanyResponse) {}
 }
 
 message CompanyResponse {
   int32 id = 1;
   string name = 2;
-}
-
-message Empty {
-
 }

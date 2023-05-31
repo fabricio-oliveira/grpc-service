@@ -3,7 +3,7 @@ start: ## start the server
 
 build-protocol: ## build protobuf protocol
 	@echo "import sys\nfrom pathlib import Path\nsys.path.append(str(Path(__file__).parent))" > ./src/generated/__init__.py
-	@python -m grpc_tools.protoc \
+	@PYTHONPATH=./src python -m grpc_tools.protoc \
 		--python_out=./src/generated \
 		--pyi_out=./src/generated \
 		--grpc_python_out=./src/generated \

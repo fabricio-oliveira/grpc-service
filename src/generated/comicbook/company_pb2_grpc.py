@@ -3,6 +3,7 @@
 import grpc
 
 from comicbook import company_pb2 as comicbook_dot_company__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class CompanyStub(object):
@@ -16,7 +17,7 @@ class CompanyStub(object):
         """
         self.GetAll = channel.unary_stream(
                 '/commicbook.Company/GetAll',
-                request_serializer=comicbook_dot_company__pb2.Empty.SerializeToString,
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=comicbook_dot_company__pb2.CompanyResponse.FromString,
                 )
 
@@ -35,7 +36,7 @@ def add_CompanyServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'GetAll': grpc.unary_stream_rpc_method_handler(
                     servicer.GetAll,
-                    request_deserializer=comicbook_dot_company__pb2.Empty.FromString,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                     response_serializer=comicbook_dot_company__pb2.CompanyResponse.SerializeToString,
             ),
     }
@@ -60,7 +61,7 @@ class Company(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/commicbook.Company/GetAll',
-            comicbook_dot_company__pb2.Empty.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             comicbook_dot_company__pb2.CompanyResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

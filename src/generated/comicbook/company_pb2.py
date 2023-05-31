@@ -11,19 +11,18 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63omicbook/company.proto\x12\ncommicbook\"+\n\x0f\x43ompanyResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x07\n\x05\x45mpty2G\n\x07\x43ompany\x12<\n\x06GetAll\x12\x11.commicbook.Empty\x1a\x1b.commicbook.CompanyResponse\"\x00\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x63omicbook/company.proto\x12\ncommicbook\x1a\x1bgoogle/protobuf/empty.proto\"+\n\x0f\x43ompanyResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t2L\n\x07\x43ompany\x12\x41\n\x06GetAll\x12\x16.google.protobuf.Empty\x1a\x1b.commicbook.CompanyResponse\"\x00\x30\x01\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comicbook.company_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _COMPANYRESPONSE._serialized_start=39
-  _COMPANYRESPONSE._serialized_end=82
-  _EMPTY._serialized_start=84
-  _EMPTY._serialized_end=91
-  _COMPANY._serialized_start=93
-  _COMPANY._serialized_end=164
+  _COMPANYRESPONSE._serialized_start=68
+  _COMPANYRESPONSE._serialized_end=111
+  _COMPANY._serialized_start=113
+  _COMPANY._serialized_end=189
 # @@protoc_insertion_point(module_scope)
