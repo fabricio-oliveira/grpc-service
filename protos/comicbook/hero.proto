@@ -3,14 +3,14 @@ syntax = "proto3";
 package commicbook;
 
 import "google/protobuf/empty.proto";
-import "company.proto";
+import "comicbook/company.proto";
 
 service Hero {
-  rpc GetAll (Empty) returns ( stream HeroResponse) {}
+  rpc GetAll (google.protobuf.Empty) returns ( stream HeroResponse) {}
 }
 
 message HeroResponse {
-  string id = 1;
+  int32 id = 1;
   string name = 2;
   CompanyResponse company = 3;
 }
