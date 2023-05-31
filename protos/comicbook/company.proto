@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package commicbook;
+
+service Company {
+  rpc GetAll (Empty) returns (stream CompanyResponse) {}
+}
+
+message CompanyResponse {
+  string id = 1;
+  string name = 2;
+}
+
+message Empty {
+
+}
