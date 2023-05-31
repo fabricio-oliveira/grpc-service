@@ -8,8 +8,7 @@ So, before run the project check that you have the correct version of python and
 
 ## to run:
 ```sh
-pip install -m requirements.txt
-make start
+pip install -m requirements.txt && make start
 ```
 
 ## to use
